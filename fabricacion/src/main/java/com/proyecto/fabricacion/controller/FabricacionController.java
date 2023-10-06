@@ -51,7 +51,7 @@ public class FabricacionController {
      * objetos de Fabricación.
      * @return El método devuelve una Lista de objetos de Fabricación.
      */
-    @GetMapping (value = "/filtrar/{costeMinimo}/{costeMaximo}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping (value = "/filtro/{costeMinimo}/{costeMaximo}", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Fabricacion> filtrarPorCoste(@PathVariable("costeMinimo") double costeMinimo, @PathVariable("costeMaximo") double costeMaximo) {
         return servicio.filtrarPorCoste(costeMinimo, costeMaximo);
     }
