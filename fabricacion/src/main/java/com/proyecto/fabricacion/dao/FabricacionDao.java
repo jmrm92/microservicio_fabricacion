@@ -10,7 +10,7 @@ import com.proyecto.fabricacion.model.Fabricacion;
 
 public interface FabricacionDao extends JpaRepository <Fabricacion, Integer> {
     
-    @Query("SELECT f FROM Fabricacion f WHERE f.coste_fabricacion BETWEEN :costeMinimo AND :costeMaximo")
+    @Query("SELECT f FROM Fabricacion f WHERE f.costeMonetario BETWEEN :costeMinimo AND :costeMaximo")
     List<Fabricacion> filtrarPorCoste(@Param("costeMinimo") double costeMinimo, 
                                           @Param("costeMaximo") double costeMaximo);
 }

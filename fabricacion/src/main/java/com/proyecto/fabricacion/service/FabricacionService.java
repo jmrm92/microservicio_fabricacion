@@ -6,7 +6,8 @@ import com.proyecto.fabricacion.model.Fabricacion;
 
 public interface FabricacionService {
     List<Fabricacion> fabricaciones();
-    void nuevaFabricacion (Fabricacion fabricacion);
-    double consultarCostePorId (int idFabricacion);
+    void nuevaFabricacion (int idModelo, int cantidadModelos);
+    double consultarCosteMonetarioPorId (int idFabricacion);
+    int consultarCostePiezasPorId (int idFabricacion);
     List<Fabricacion> filtrarPorCoste (double costeMinimo, double costeMaximo);
 }
